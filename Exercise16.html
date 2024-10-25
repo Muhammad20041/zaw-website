@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    body{
+      font-family: Arial;
+    }
+
+    .overall-view {
+      width: 300px;
+    }
+
+    .thumbnail-sytle {
+      width: 300px;
+    }
+
+    .div-2-2 {
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      align-items: center;
+    }
+
+    .channel-style {
+      border-radius: 50px;
+      width: 50px;
+    }
+
+    .div-3-2 {
+      margin-left: 10px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .div-2-1 {
+      margin-bottom: 3px;
+    }
+
+    .time-container {
+      position: relative;
+    }
+
+    .time-absolute {
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(33, 33, 33);
+      background-color: rgb(33, 33, 33);
+      color: white;
+      font-size: 12px;
+      padding: 3px 5px;
+      border-radius: 4px;
+      position: absolute;
+      bottom: 12px;
+      right: 6px;
+    }
+
+    .tooltip-card {
+      display: grid;
+      grid-template-columns: 65px 1fr;
+      align-items: center;
+    }
+
+    .card-style {
+      width: 240px;
+      border: 1px solid white;
+      background-color: rgb(255, 255, 255);
+      padding: 10px 17px; 
+      display: inline-block;
+      border-radius: 10px;
+      box-shadow:  1px 1px 5px rgb(0, 0, 0, 0.5);
+    }
+
+    .channel2-style {
+      width: 65px;
+      border-radius: 33px;
+    }
+
+    .div2-2-2 {
+      line-height: 6px;
+      margin-left: 10px;
+    }
+
+    .channel-hover-tooltip {
+      position: relative;
+    }
+
+    .card-style{
+      position: absolute;
+      top: 65px;
+      left: 15px;
+      opacity: 0;
+      transition: 0.15s;
+      pointer-events: none;
+    }
+
+    .channel-hover-tooltip:hover .card-style{
+      opacity: 1;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <div class="overall-view">
+    <div class="div-2-1">
+      <div class="time-container">
+        <img class="thumbnail-sytle" src="thumbnail-1.webp">
+        <div class="time-absolute">14:20</div>
+      </div>
+    </div>
+    <div class="div-2-2">
+      <div id="div" class="div-3-1">
+        <div class="channel-hover-tooltip">
+          <img class="channel-style" src="channel-1.jpeg">
+          <div class="card-style">
+            <div class="tooltip-card">
+              <div class="div2-2-1">
+                <img class="channel2-style" src="channel-1.jpeg">
+              </div>
+              <div class="div2-2-2">
+                <div class="div2-3-1">
+                  <p style="font-weight: bold;">Marques Brownlee</p>
+                </div>
+                <div class="div2-3-2">
+                  <p style="color: grey; font-size: 15px;">15M subcribers</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="div" class="div-3-2">
+        <p>Talking Tech and AI with Google CEO Sundar Pichail!</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
